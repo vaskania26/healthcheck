@@ -45,10 +45,7 @@ process.on('SIGTERM', () => {
 });
 
 const shutdown = () => {
-  console.info('SIGTERM signal received.');
-  console.log('Closing http server.');
   server.close(() => {
-    console.log('Http server closed.');
     process.exit(0);
   });
 };
