@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const uri = 'https://yesno.wtf/api';
 
-app.get('/healthcheck', (req, res) => {
+app.get('/healthz', (req, res) => {
   axios
     .head(uri)
     .then((response) => response.status)
