@@ -26,6 +26,8 @@ app.get('/random', async (req, res) => {
       res.send({
         result: false,
       });
+    } else {
+      res.sendStatus(500);
     }
   } catch (err) {
     res.sendStatus(500);
