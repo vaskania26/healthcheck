@@ -5,12 +5,29 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "format": "prettier --write . && eslint --fix .",
+    "lint": "prettier --check . && eslint .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint  --fix"
+    ]
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4"
   }
 }
