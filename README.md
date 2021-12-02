@@ -21,3 +21,8 @@
 
 ###Step 5: Pull an image from Amazon ECR
            docker pull aws_account_id.dkr.ecr.eu-central-1.amazonaws.com/healthRepo:latest
+           
+           
+           
+           
+http://ec2-18-193-109-137.eu-central-1.compute.amazonaws.com:8888/random
