@@ -19,19 +19,15 @@ app.get('/random', async (req, res) => {
     const response = await axios(uri);
     const { answer } = response.data;
     if (answer === 'yes') {
-      res.send({
+      return res.send({
         result: true,
       });
-    } else if (answer === 'no') {
-      res.send({
-        result: false,
-      });
-    } else {
-      res.sendStatus(500);
     }
+    return answer === 'no' ? res.send({ result: false }) : res.sendStatus(500);
   } catch (err) {
     res.sendStatus(500);
   }
+  return res.end();
 });
 
 const server = app.listen(port, () => {
