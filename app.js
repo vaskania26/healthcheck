@@ -8,7 +8,7 @@ const uri = 'https://yesno.wtf/api';
 app.get('/healthz', async (req, res) => {
   try {
     const response = await axios.head(uri);
-    res.send(response.status);
+    res.sendStatus(response.status);
   } catch (err) {
     res.sendStatus(500);
   }
