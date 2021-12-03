@@ -6,7 +6,7 @@ COPY package*.json ./
 
 ENV NODE_ENV=production
 
-RUN npm ci 
+RUN npm ci --ignore-scripts 
 
 COPY ./app.js .
 
