@@ -1,7 +1,7 @@
 ## HEALTHCHECK deploy instruction with docker cli and aws cli
 **Step 1: Build the Docker image from your Dockerfile.**
 
-docker build -t healthZ .
+     docker build -t healthZ .
      
 **Step 2: Authenticate to your default registry**
 
