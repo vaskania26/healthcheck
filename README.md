@@ -25,4 +25,4 @@
            
            
            
-http://ec2-18-193-109-137.eu-central-1.compute.amazonaws.com:8888/random
+http://ec2-18-192-48-96.eu-central-1.compute.amazonaws.com/random
